@@ -1,0 +1,21 @@
+//package Intro_to_Java_1_2;
+
+public class RandomInt {
+
+    public static void main(String[] args)
+    {
+        int n = Integer.parseInt(args[0]);
+
+        double r = Math.random(); //uniform between 0.0 and 1.0
+        int value = (int) ( r * n); //uniform between 0 and n-1
+
+        System.out.println(value);
+
+
+        
+
+
+
+    }
+    
+}
