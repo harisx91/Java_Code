@@ -638,6 +638,15 @@ public final class StdIn {
         return readAllStrings();
     }
 
+    public static void setFile(String filename) {
+        try {
+            scanner.close(); // warning, this may close StdIn the first time!
+            setScanner(new Scanner(new java.io.File(filename), CHARSET_NAME));
+        }
+        catch (java.io.IOException ioe) {
+            System.err.println("Could not open " + filename);
+        }
+    }
 
     /**
      * Interactive test of basic functionality.
