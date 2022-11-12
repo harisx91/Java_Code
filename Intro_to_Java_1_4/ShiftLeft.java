@@ -43,6 +43,9 @@ public class ShiftLeft {
     {
         System.out.print(array[i] + " ");
     }
+//takes the command line arguement n
+//random integers between 0 and n-1 (int)(Math.random() * n)
+
 
 }
 }

@@ -16,6 +16,14 @@ public static void main(String[] args)
 
     System.out.println(sum);
 
+    /* 
+    double[] harmonic = new double[n];
+    for (int i = 1; i < n; i++);
+    harmonic[i] = harmonic[i - 1] + 1.0/i;
+    */
+
+
+
 }
     
 }

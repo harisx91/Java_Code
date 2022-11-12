@@ -16,12 +16,7 @@ public class DeclareCreateInitializeArrays {
 
         int[] samples2 = {7, 902, 3, 12, 42};
 
-        System.out.println(samples2[2]);
 
-        for (int i = 0; i < samples2.length; i++)
-        {
-            System.out.println(i + " " + samples2[i]);
-        }
         //spreadsheet is the name of the variable that is reference to a 2D array
         double[][] spreadsheet = new double[5][7];
 
@@ -42,8 +37,8 @@ public class DeclareCreateInitializeArrays {
 
         int[] array;
         array = new int[5];
-        
-
 
     }
+
     }
+
