@@ -1,0 +1,11 @@
+The user has 5 tries to think for a number between 1 and 100000 
+What is your next guess? 
+Too Low
+What is your next guess? 
+Too High!
+What is your next guess? 
+Too High!
+What is your next guess? 
+Too High!
+What is your next guess? 
+Too Low

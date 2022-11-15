@@ -43,8 +43,23 @@ public class ShiftLeft {
     {
         System.out.print(array[i] + " ");
     }
+    System.out.println();
 //takes the command line arguement n
 //random integers between 0 and n-1 (int)(Math.random() * n)
+
+//MIN and MAX in an array
+int max = Integer.MIN_VALUE;
+int min = Integer.MAX_VALUE;
+for(int i = 0; i < array.length; i++)
+{
+    if(array[i] > max)
+    max = array[i];
+
+    if(array[i] < min)
+    min = array[i];
+}
+System.out.println(min);
+System.out.println(max);
 
 
 }
