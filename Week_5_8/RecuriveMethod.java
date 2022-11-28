@@ -1,3 +1,5 @@
+import javax.management.ValueExp;
+
 //package Java_Code.Week_5_8;
 
 public class RecuriveMethod {
@@ -30,16 +32,36 @@ public class RecuriveMethod {
         {
             count = 1;
         }
+        return count + rCountFive(n/10);
 
+    }
+
+    public static boolean findValue(int[] a, int v, int bIndex)
+    {   
+       //base case
+        if(bIndex == a.length)
+        {
+            return false; //v jas ot been found in the entire array
+        }
+        else if (a[bIndex] == v)
+        {
+
+            return true; //v has been found
+        }
+        //recursive case
+        return findValue(a, v, bIndex + 1);
     }
     
 
     public static void main(String[] main)
     {
-        StdOut.print("Write a number of interger: ");
-        int number = StdIn.readInt();
-        int isFivenumber = isFive(number);
-        StdOut.println(number + " has " + isFivenumber + " five(s)");
+        int[] array = { 65, 635, 13, 55, 2, 7 , 88, 231};
+        boolean found = findValue(array, 2, 0);
+        StdOut.println(found);
+        System.out.println(Math.pow(5/2, 2));
+
+
     }
+    
 }
 
