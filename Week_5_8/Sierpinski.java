@@ -1,5 +1,3 @@
-//package Java_Code.Week_5_8;
-
 public class Sierpinski {
     // method to find the height of an equilateral triangle with side length =
 
