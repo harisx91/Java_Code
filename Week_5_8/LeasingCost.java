@@ -240,19 +240,20 @@ public class LeasingCost {
         double co2PerUnit=0;
         for ( int i = 0; i < vehicles.length; i++ ) {
             v = vehicles[i];
+            
             if(Fuel.GAS==v.getFuel().getType()) {
                 fuelPrice=gasPrice;
                 co2PerUnit=Fuel.CO2EMITTED_GASCOMBUSTION;
-            } else if(Fuel.ELECTRIC==v.getFuel().getType()) {
+            } else{
                 fuelPrice=electricityPrice;
                 co2PerUnit=Fuel.CO2EMITTED_ELECTRICITYCOMBUSTION;
             } 
             double co2Emission = computeCO2(v.getLease().getLeaseLength(), v.getFuel().getUsage(), v.getLease().getMileageAllowance(), co2PerUnit);
             double fuelCost = computeFuelCost(v.getLease().getLeaseLength(), v.getFuel().getUsage(), v.getLease().getMileageAllowance(), fuelPrice);
-            double leaseCost = computeLeaseCost(v.getLease().getDueAtSigning(), v.getLease().getLeaseLength(), v.getLease().getMonthlyCost()) + fuelCost;
+            double leaseCost = computeLeaseCost(v.getLease().getDueAtSigning(), v.getLease().getLeaseLength(), v.getLease().getMonthlyCost());
             v.setCO2Emission(co2Emission);
             v.setFuelCost(fuelCost);
-            v.setTotalCost(leaseCost);
+            v.setTotalCost(leaseCost + fuelCost);
             System.out.println(v.toString());
         }
 
