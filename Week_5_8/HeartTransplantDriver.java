@@ -30,7 +30,7 @@ public class HeartTransplantDriver {
 
         // Prints all patients.
         StdOut.println("ALL patients: ");
-        for (Patient p : ht.getPatients()) {   
+        for (Person p : ht.getPatients()) {   
             StdOut.println(p);
         }
         StdOut.println();
@@ -47,16 +47,16 @@ public class HeartTransplantDriver {
 
         // Prints all patients with age above 18.
         StdOut.println("Patients above age 18: "); 
-        Patient patientsByAge[] = ht.getPatientsWithAgeAbove(18);
-        for (Patient p : patientsByAge ) {   
+        Person patientsByAge[] = ht.getPatientsWithAgeAbove(18);
+        for (Person p : patientsByAge ) {   
             StdOut.println(p.toString() );
         }
         StdOut.println();
 
         // Prints all patients whose heart disease was caused by accident.
         StdOut.println("Patients whose heart disease was caused by accidents: ");
-        Patient patientsByCause[] = ht.getPatientsByHeartConditionCause(Patient.CAUSE_ACCIDENT);
-        for (Patient p : patientsByCause) {
+        Person patientsByCause[] = ht.getPatientsByHeartConditionCause(Person.CAUSE_ACCIDENT);
+        for (Person p : patientsByCause) {
             StdOut.println(p.toString() );
         }
         StdOut.println();

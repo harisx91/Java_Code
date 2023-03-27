@@ -54,19 +54,19 @@ public class SurvivabilityByCause {
 
     private static String causeToString(int cause){
         switch (cause) {
-            case Patient.CAUSE_VIRAL:
+            case Person.CAUSE_VIRAL:
             return "viral";
 
-            case Patient.CAUSE_CONGENITAL:
+            case Person.CAUSE_CONGENITAL:
             return "congenital";
             
-            case Patient.CAUSE_ACCIDENT:
+            case Person.CAUSE_ACCIDENT:
             return "accident";
 
-            case Patient.CAUSE_HEART_ARTERY_DISEASE:
+            case Person.CAUSE_HEART_ARTERY_DISEASE:
             return "heart artery disease";
 
-            case Patient.CAUSE_HEART_MUSCLE_DISEASE:
+            case Person.CAUSE_HEART_MUSCLE_DISEASE:
             return "heart muscle disease";
 
             default:
